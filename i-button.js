@@ -59,11 +59,13 @@ module.exports = function (window) {
             },
             init: function() {
                 var element = this,
-                    designNode = element.getDesignNode();
+                    designNode = element.getDesignNode(),
+                    buttonText = designNode.getHTML();
 
                 // when initializing: make sure NOT to overrule model-properties that already
                 // might have been defined when modeldata was boundend. Therefore, use `defineWhenUndefined`
-                element.defineWhenUndefined('text', designNode.getHTML()); // sets element.model.someprop = somevalue; when not defined yet
+
+                element.defineWhenUndefined('text', (buttonText==='') ? '&nbsp;' : buttonText); // sets element.model.someprop = somevalue; when not defined yet
                 // set the content:
                 element.setHTML('<button></button>');
             },
