@@ -100,7 +100,7 @@ i-button >button:focus {
 }
 
 i-button >button:focus {
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.5) inset;
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.6) inset;
 }
 
 i-button.i-hover >button,
@@ -113,10 +113,22 @@ i-button >button:hover:focus {
 i-button >button:focus {
     outline: 0;
 }
-i-button.i-active >button,
-i-button >button.pure-button-active, /* need .pure-button-active for it gets set when "enter-pressed" on button */
-i-button >button:active {
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.4) inset, 0 0 6px rgba(0,0,0, 0.2) inset;
+
+i-button.i-active.i-hover >button,
+i-button.i-active >button:hover,
+i-button.i-active.i-hover >button:focus,
+i-button.i-active >button:hover:focus,
+i-button.i-hover >button.pure-button-active,  /* need .pure-button-active for it gets set when "enter-pressed" on button */
+i-button >button.pure-button-active:hover,  /* need .pure-button-active for it gets set when "enter-pressed" on button */
+i-button.i-hover >button.pure-button-active:focus,  /* need .pure-button-active for it gets set when "enter-pressed" on button */
+i-button >button.pure-button-active:hover:focus,  /* need .pure-button-active for it gets set when "enter-pressed" on button */
+i-button >button.pure-button-active,  /* need .pure-button-active for it gets set when "enter-pressed" on button */
+i-button >button.pure-button-active:focus,  /* need .pure-button-active for it gets set when "enter-pressed" on button */
+i-button.i-hover >button:active,
+i-button >button:hover:active,
+i-button.i-hover >button:focus:active,
+i-button >button:hover:focus:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.8) inset, 0 0 6px rgba(0,0,0, 0.4) inset;
 }
 
 i-button.i-disabled >button,

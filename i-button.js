@@ -59,7 +59,7 @@ module.exports = function (window) {
             },
             init: function() {
                 var element = this,
-                    designNode = element.getDesignNode(),
+                    designNode = element.getItagContainer(),
                     buttonText = designNode.getHTML();
 
                 // when initializing: make sure NOT to overrule model-properties that already
