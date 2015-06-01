@@ -27,6 +27,11 @@ module.exports = function (window) {
                 }
             );
         });
+
+        Event.before('tap', function(e) {
+            e.preventDefaultContinue();
+        }, 'i-button > button');
+
         Event.after('tap', function(e) {
             var element = e.target.getParent(),
                 model = element.model;
